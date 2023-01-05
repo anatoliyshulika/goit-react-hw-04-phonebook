@@ -16,14 +16,10 @@ const initialValues = {
 };
 
 export default function ContactForm({ onSubmit }) {
-  function handleSubmit(values, actions) {
-    onSubmit(values, actions);
-  }
-
   return (
     <Formik
       initialValues={initialValues}
-      onSubmit={handleSubmit}
+      onSubmit={onSubmit}
       validationSchema={schema}
     >
       <AddContactForm>
